@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type ="text/css" href="styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script type="text/javascript">
+
+        var jakob =	{
+             urls:"http://tutorials.jenkov.com/angularjs/index.html",
+            title: "AngularJS Tutorial",
+            image: "http://tutorials.jenkov.com/images/layout/small-portrait_mini.jpg",
+            author: "Jakob Jenkov"}
+        var jakobobj = JSON.parse(jakob);
+        document.getElementById("first").innerHTML =
+                jakobobj.urls + "<br>" +
+                jakobobj.title + "<br>" +
+                jakobobj.image + "<br>" +
+                jakobobj.author;
+
+        var jmartin = {
+            url: 'http://tutorialzine.com/2013/08/learn-angularjs-5-examples/',
+            title: 'Learn AngularJS With These 5 Practical Examples',
+            image: 'http://blog.guinatal.com/wp-content/uploads/2015/01/angularjs.png',
+            author: 'JMartin Angelov'
+        }
+        var jmartinobj = JSON.parse(jmartin);
+        document.getElementById("second").innerHTML =
+                jmartinobj.url + "<br>" +
+                jmartinobj.title + "<br>" +
+                jmartinobj.image + "<br>" +
+                jmartinobj.author;
+
+        var angularapp = {
+            url: 'https://github.com/angular-app/angular-app',
+            title: 'AngularJS CRUD application demo',
+            image: 'http://blog.guinatal.com/wp-content/uploads/2015/01/angularjs.png',
+            author: 'angular-app'
+        }
+        var angularappobj = JSON.parse(angularapp);
+        document.getElementById("third").innerHTML =
+                angularappobj.url + "<br>" +
+                angularappobj.title + "<br>" +
+                angularappobj.image + "<br>" +
+                angularappobj.author;
+
+        var nick = {
+            url: 'https://www.airpair.com/angularjs/building-angularjs-app-tutorial',
+            title: 'AngularJS Tutorial - Building a Web App in 5 minutes',
+            image: 'https://0.gravatar.com/avatar/8ef3e73105c63fcac882115c9ad346f2?s=100',
+            author: 'Nick Kaye'
+        }
+        var nickobj = JSON.parse(nick);
+        document.getElementById("fourth").innerHTML =
+                nickobj.url + "<br>" +
+                nickobj.title + "<br>" +
+                nickobj.image + "<br>" +
+                nickobj.author;
+
+        var raoni = {
+            url: 'http://www.toptal.com/angular-js/a-step-by-step-guide-to-your-first-angularjs-app',
+            title: 'A Step-by-Step Guide to Your First AngularJS App',
+            image: 'http://www.toptal.com/uploads/user/photo/256/small_1233500_508166272610903_1884720025_n.jpg',
+            author: 'Raoni Boaventura'
+        }
+        var raoniobj = JSON.parse(raoni);
+        document.getElementById("fifth").innerHTML =
+                raoniobj.url + "<br>" +
+                raoniobj.title + "<br>" +
+                raoniobj.image + "<br>" +
+                raoniobj.author;
+
+        var santiago = {
+            url: 'http://ng-learn.org/tags/workshop.html',
+            title: 'AngularJS -- Workshop',
+            image: 'http://blog.guinatal.com/wp-content/uploads/2015/01/angularjs.png',
+            author: 'Santiago Esteva'
+        }
+        var santiagoobj = JSON.parse(santiago);
+        document.getElementById("sixth").innerHTML =
+                santiagoobj.url + "<br>" +
+                santiagoobj.title + "<br>" +
+                santiagoobj.image + "<br>" +
+                santiagoobj.author;
+
+        var dan = {
+            url: 'https://www.youtube.com/watch?v=tnXO-i7944M',
+            title: 'AngularJS in 20ish Minutes ',
+            image: 'http://blog.guinatal.com/wp-content/uploads/2015/01/angularjs.png',
+            author: 'Dan Wahlin'
+        }
+        var danobj = JSON.parse(danobj);
+        document.getElementById("seventh").innerHTML =
+                danobj.url + "<br>" +
+                danobj.title + "<br>" +
+                danobj.image + "<br>" +
+                danobj.author;
+
+        var mva = {
+            url: 'http://www.microsoftvirtualacademy.com/training-courses/introduction-to-angularjs',
+            title: 'Introduction to AngularJS',
+            image: 'https://irodriguezm.files.wordpress.com/2009/12/logo_mva.png',
+            author: 'Microsoft Virtual Academy'
+        }
+        var mvaobj = JSON.parse(mva);
+        document.getElementById("eighth").innerHTML =
+                mvaobj.url + "<br>" +
+                mvaobj.title + "<br>" +
+                mvaobj.image + "<br>" +
+                mvaobj.author;
+
+
+/* script of thing i am trying to implement */
+        $(function() {
+            $( ".column" ).sortable({
+                connectWith: ".column",
+                handle: ".portlet-header",
+                cancel: ".portlet-toggle",
+                placeholder: "portlet-placeholder ui-corner-all"
+            });
+
+            $( ".portlet" )
+                    .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+                    .find( ".portlet-header" )
+                    .addClass( "ui-widget-header ui-corner-all" )
+                    .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+
+            $( ".portlet-toggle" ).click(function() {
+                var icon = $( this );
+                icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+                icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+            });
+        });
+/* end of script of thing i am trying to implement */
+
+    </script>
+</head>
+<body>
+<h1>Below is a list of tutorials for AngularJS</h1>
+
+<!-- thing i am trying to implement in body -->
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">First</div>
+        <div class="portlet-content" id="first"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Second</div>
+        <div class="portlet-content" id="second"></div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Third</div>
+        <div class="portlet-content" id="third"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Fourth</div>
+        <div class="portlet-content" id="fourth"></div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Fifth</div>
+        <div class="portlet-content" id="fifth"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Sixth</div>
+        <div class="portlet-content" id="sixth"></div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="portlet">
+        <div class="portlet-header">Seventh</div>
+        <div class="portlet-content" id="seventh"></div>
+    </div>
+    <div class="portlet">
+        <div class="portlet-header">Eighth</div>
+        <div class="portlet-content" id="Eighth"></div>
+    </div>
+</div>
+<!-- end of thing i am trying to implement in body -->
+
+</body>
+</html>
