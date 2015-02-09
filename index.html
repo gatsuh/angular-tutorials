@@ -1,15 +1,23 @@
 <!DOCTYPE html>
+<!-- this ng-app MUST match the module name in your app.js-->
 <html ng-app="app">
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" type ="text/css" href="styles.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
+    <!-- this MUST point to your app.js-->
     <script src="js/app.js"></script>
 </head>
+<!-- this MUST be the name of your controller... you must use an alias the way I've done this one -->
 <body ng-controller="TutorialController as cntrl">
+  <!-- this code loops through the items in the cntrl -->	
   <div class="list-group-item" ng-repeat="item in cntrl.items">
+	<!-- this is an unformated dump of the object. You still need to work through this and make it look
+	     good. Use bootstrap for formating and angular to be able to get to the data.
+	     All of the links in the json file are to tutorials that show you how to do what I just did. You
+	     need to do some reading of these tutorials. 
+	-->
 	{{item}}
   </div>
 </body>

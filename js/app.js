@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module('app', []);
     app.controller('TutorialController', function(){
-	   this.items = 	[
+	   this.items = [
 			{
 				"url": "http://tutorials.jenkov.com/angularjs/index.html",
 				"title": "AngularJS Tutorial",
@@ -52,5 +52,4 @@
 			}	
 		];
     });
-
 })();
