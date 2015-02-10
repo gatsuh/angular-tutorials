@@ -28,7 +28,7 @@
 			},
 			{
 				"url": "http://www.toptal.com/angular-js/a-step-by-step-guide-to-your-first-angularjs-app",
-				"title": "A Step-by-Step Guide to Your First AngularJS App",
+				"title": "A Step-by-Step Guide to Your 1st Angular App",
 				"image": "http://www.toptal.com/uploads/user/photo/256/small_1233500_508166272610903_1884720025_n.jpg",
 				"author": "Raoni Boaventura"
 			},
